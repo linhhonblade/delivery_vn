@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend" inherit_id="stock.stock_assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/delivery_vn/static/src/scss/form_view.scss"/>
+        </xpath>
+    </template>
+</odoo>

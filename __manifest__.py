@@ -19,14 +19,19 @@
     'version': '13.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['stock', 'delivery'],
+    'depends': ['stock', 'delivery', 'base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
         'views/res_config_settings_views.xml',
+        'views/assets.xml',
+        'views/res_partner_views.xml',
+        'data/res_country_data.xml',
+        'data/res.country.state.csv',
+        'data/res.country.district.csv',
+        'data/res.country.ward.csv',
     ],
     # only loaded in demonstration mode
     'demo': [
