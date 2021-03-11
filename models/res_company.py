@@ -8,8 +8,6 @@ class Company(models.Model):
                                   inverse='_inverse_district')
     ward_id = fields.Many2one('res.country.ward', compute='_compute_address',
                               inverse='_inverse_ward')
-    # country_id = fields.Many2one('res.country', compute='_compute_address',
-    #                              inverse='_inverse_country', string="Country", store=True)
 
     def _get_company_address_field_names(self):
         return ['street', 'street2', 'city', 'zip', 'state_id', 'country_id', 'district_id',

@@ -32,6 +32,7 @@
         'data/res.country.state.csv',
         'data/res.country.district.csv',
         'data/res.country.ward.csv',
+        'views/res_company_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
