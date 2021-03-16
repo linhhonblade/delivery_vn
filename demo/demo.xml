@@ -1,30 +1,52 @@
 <odoo>
     <data>
-<!--
-          <record id="object0" model="delivery_vn.delivery_vn">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+        <!--Resource: res.partner-->
+        <record id="main_partner_sasa" model="res.partner">
+            <field name="name">SASA Company</field>
+            <field name="is_company">1</field>
+            <field name="street">Số 1 Phùng Chí Kiên</field>
+            <field name="ward_id" ref="delivery_vn.ward_vn_3161"/>
+            <field name="district_id" ref="delivery_vn.district_vn_33"/>
+            <field name='state_id' ref="base.state_vn_VN-HN"/>
+            <field name="email">sasa@example.com</field>
+            <field name="phone">0934295987</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
+        <record id="res_partner_misa_sg" model="res.partner">
+            <field name="name">Misa Partner SG</field>
+            <field name="is_company">1</field>
+            <field name="street">Miss Ao Dai Building, 21 Nguyễn Trung Ngạn, Bến Nghé, Quận
+                1</field>
+            <field name="ward_id" ref="delivery_vn.ward_vn_4519"/>
+            <field name="district_id" ref="delivery_vn.district_vn_1"/>
+            <field name='state_id' ref="base.state_vn_VN-SG"/>
+            <field name="email">misamisa@example.com</field>
+            <field name="phone">01234872742</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
 
-          <record id="object1" model="delivery_vn.delivery_vn">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <record id="res_partner_misa_hn" model="res.partner">
+            <field name="name">Misa Partner HN</field>
+            <field name="is_company">1</field>
+            <field name="street">1, Dương Đình Nghệ</field>
+            <field name="ward_id" ref="delivery_vn.ward_vn_3167"/>
+            <field name="district_id" ref="delivery_vn.district_vn_33"/>
+            <field name='state_id' ref="base.state_vn_VN-HN"/>
+            <field name="email">misakutexinhgai@example.com</field>
+            <field name="phone">0838437483</field>
+            <field name='country_id' ref='base.vn'/>
+        </record>
 
-          <record id="object2" model="delivery_vn.delivery_vn">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+        <!--Resource: res.company-->
+        <record id="main_company_sasa" model="res.company">
+            <field name="name">SASA Company</field>
+            <field name="partner_id" ref="main_partner_sasa"/>
+            <field name="currency_id" ref="base.VND"/>
+        </record>
 
-          <record id="object3" model="delivery_vn.delivery_vn">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="delivery_vn.delivery_vn">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <!--Resource: res.user-->
+        <record id="base.user_admin" model="res.users">
+            <field name="company_ids" eval="[(4, ref('main_company_sasa'))]"/>
+        </record>
     </data>
 </odoo>
