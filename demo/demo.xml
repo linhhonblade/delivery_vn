@@ -15,8 +15,7 @@
         <record id="res_partner_misa_sg" model="res.partner">
             <field name="name">Misa Partner SG</field>
             <field name="is_company">1</field>
-            <field name="street">Miss Ao Dai Building, 21 Nguyễn Trung Ngạn, Bến Nghé, Quận
-                1</field>
+            <field name="street">Miss Ao Dai Building, 21 Nguyễn Trung Ngạn</field>
             <field name="ward_id" ref="delivery_vn.ward_vn_4519"/>
             <field name="district_id" ref="delivery_vn.district_vn_1"/>
             <field name='state_id' ref="base.state_vn_VN-SG"/>
